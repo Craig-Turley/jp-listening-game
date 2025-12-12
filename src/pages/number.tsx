@@ -6,7 +6,7 @@ import { ChevronRight, SettingsIcon, Volume2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
-const Number = () => {
+const NumberPage = () => {
   const { stats, recordAnswer } = useScore();
   const [min, setMin] = useState<number>(0);
   const [max, setMax] = useState<number>(100);
@@ -136,4 +136,4 @@ const Number = () => {
   );
 };
 
-export default Number;
+export default NumberPage;

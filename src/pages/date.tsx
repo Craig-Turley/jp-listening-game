@@ -7,7 +7,7 @@ import { ChevronRight, SettingsIcon, Volume2 } from "lucide-react";
 import { useState, type ChangeEvent } from "react";
 import { toast } from "sonner";
 
-const Date = () => {
+const DatePage = () => {
   const { stats, recordAnswer } = useScore();
   const [includeYear, setIncludeYear] = useState<boolean>(true);
   const [minYear, setMinYear] = useState<number>(1900);
@@ -123,4 +123,4 @@ const Date = () => {
   );
 };
 
-export default Date;
+export default DatePage;

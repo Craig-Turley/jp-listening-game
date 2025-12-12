@@ -7,7 +7,7 @@ import { ChevronRight, SettingsIcon, Volume2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
-const Time = () => {
+const TimePage = () => {
   const { stats, recordAnswer } = useScore();
   const [militaryTime, setMilitaryTime] = useState<boolean>(false);
   const [step, setStep] = useState<number>(15);
@@ -126,4 +126,4 @@ const Time = () => {
   );
 };
 
-export default Time;
+export default TimePage;

@@ -6,7 +6,7 @@ import { useLocation } from "wouter";
 
 const MainNav = () => {
   const { theme, toggleTheme } = useTheme();
-  const [location, navigate] = useLocation();
+  const [_, navigate] = useLocation();
 
   return (
     <div className="w-full p-2 flex justify-between">

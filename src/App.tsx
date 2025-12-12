@@ -1,13 +1,13 @@
 import { Route, Switch } from 'wouter'
 import './App.css'
 import Index from './pages'
-import Date from './pages/date'
-import Number from './pages/number'
 import { WithLayouts } from './layouts/with-layouts'
 import MainLayout from './layouts/main-layout'
 import { Toaster } from './components/ui/sonner'
 import { ScoreProvider } from './contexts/score-context'
-import Time from './pages/time'
+import TimePage from './pages/time'
+import DatePage from './pages/date'
+import NumberPage from './pages/number'
 
 function App() {
   return (
@@ -18,15 +18,15 @@ function App() {
         </Route>
 
         <Route path="/date">
-          <WithLayouts page={Date} layouts={MainLayout} />
+          <WithLayouts page={DatePage} layouts={MainLayout} />
         </Route>
 
         <Route path="/time">
-          <WithLayouts page={Time} layouts={MainLayout} />
+          <WithLayouts page={TimePage} layouts={MainLayout} />
         </Route>
 
         <Route path="/number">
-          <WithLayouts page={Number} layouts={MainLayout} />
+          <WithLayouts page={NumberPage} layouts={MainLayout} />
         </Route>
       </Switch>
 
