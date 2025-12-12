@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=M+PLUS+1p&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* NOTE: the light theme links to catpuccin latte and dark links to catpuccin mocha */
+:root {
+  --radius: 0.625rem;
+
+  /* Core surfaces */
+  --background: #eff1f5;
+  /* Base */
+  --foreground: #4c4f69;
+  /* Text */
+
+  --card: #ccd0da;
+  /* Surface 0 */
+  --card-foreground: #4c4f69;
+  /* Text */
+
+  --popover: #bcc0cc;
+  /* Surface 1 */
+  --popover-foreground: #4c4f69;
+  /* Text */
+
+  /* Main accents */
+  --primary: #8839ef;
+  /* Mauve */
+  --primary-foreground: #eff1f5;
+  /* Base */
+
+  --secondary: #ccd0da;
+  /* Surface 0 */
+  --secondary-foreground: #4c4f69;
+  /* Text */
+
+  --muted: #e6e9ef;
+  /* Mantle */
+  --muted-foreground: #6c6f85;
+  /* Subtext 0 */
+
+  --accent: #fe640b;
+  /* Peach */
+  --accent-foreground: #eff1f5;
+  /* Base */
+
+  /* Destructive */
+  --destructive: #d20f39;
+  /* Red */
+
+  /* Borders / inputs / focus */
+  --border: #dce0e8;
+  /* Crust */
+  --input: #dce0e8;
+  /* Crust */
+  --ring: #209fb5;
+  /* Sapphire */
+
+  /* Charts */
+  --chart-1: #8839ef;
+  /* Mauve */
+  --chart-2: #1e66f5;
+  /* Blue */
+  --chart-3: #fe640b;
+  /* Peach */
+  --chart-4: #40a02b;
+  /* Green */
+  --chart-5: #dc8a78;
+  /* Rosewater */
+
+  /* Sidebar */
+  --sidebar: #e6e9ef;
+  /* Mantle */
+  --sidebar-foreground: #4c4f69;
+  /* Text */
+
+  --sidebar-primary: #8839ef;
+  /* Mauve */
+  --sidebar-primary-foreground: #eff1f5;
+  /* Base */
+
+  --sidebar-accent: #ccd0da;
+  /* Surface 0 */
+  --sidebar-accent-foreground: #4c4f69;
+  /* Text */
+
+  --sidebar-border: #dce0e8;
+  /* Crust */
+  --sidebar-ring: #209fb5;
+  /* Sapphire */
+}
+
+.dark {
+  /* Core surfaces */
+  --background: #1e1e2e;
+  /* Base */
+  --foreground: #cdd6f4;
+  /* Text */
+
+  --card: #313244;
+  /* Surface 0 */
+  --card-foreground: #cdd6f4;
+  /* Text */
+
+  --popover: #45475a;
+  /* Surface 1 */
+  --popover-foreground: #cdd6f4;
+  /* Text */
+
+  /* Main accents */
+  --primary: #cba6f7;
+  /* Mauve */
+  --primary-foreground: #11111b;
+  /* Crust */
+
+  --secondary: #45475a;
+  /* Surface 1 */
+  --secondary-foreground: #cdd6f4;
+  /* Text */
+
+  --muted: #313244;
+  /* Surface 0 */
+  --muted-foreground: #a6adc8;
+  /* Subtext 0 */
+
+  --accent: #fab387;
+  /* Peach */
+  --accent-foreground: #11111b;
+  /* Crust */
+
+  /* Destructive */
+  --destructive: #f38ba8;
+  /* Red */
+
+  /* Borders / inputs / focus */
+  --border: #313244;
+  /* Surface 0 */
+  --input: #313244;
+  /* Surface 0 */
+  --ring: #74c7ec;
+  /* Sapphire */
+
+  /* Charts */
+  --chart-1: #cba6f7;
+  /* Mauve */
+  --chart-2: #89b4fa;
+  /* Blue */
+  --chart-3: #fab387;
+  /* Peach */
+  --chart-4: #a6e3a1;
+  /* Green */
+  --chart-5: #f5e0dc;
+  /* Rosewater */
+
+  /* Sidebar */
+  --sidebar: #181825;
+  /* Mantle */
+  --sidebar-foreground: #cdd6f4;
+  /* Text */
+
+  --sidebar-primary: #cba6f7;
+  /* Mauve */
+  --sidebar-primary-foreground: #11111b;
+  /* Crust */
+
+  --sidebar-accent: #313244;
+  /* Surface 0 */
+  --sidebar-accent-foreground: #cdd6f4;
+  /* Text */
+
+  --sidebar-border: #45475a;
+  /* Surface 1 */
+  --sidebar-ring: #74c7ec;
+  /* Sapphire */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "IBM Plex Mono", "M PLUS 1p", sans-serif;
+  }
+}
