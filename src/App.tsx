@@ -1,4 +1,4 @@
-import { Route, Switch } from 'wouter'
+import { Route, Router, Switch } from 'wouter'
 import './App.css'
 import Index from './pages'
 import { WithLayouts } from './layouts/with-layouts'
@@ -11,27 +11,29 @@ import NumberPage from './pages/number'
 
 function App() {
   return (
-    <ScoreProvider>
-      <Switch>
-        <Route path="/" >
-          <WithLayouts page={Index} layouts={MainLayout} />
-        </Route>
+    <Router base="/jp-listening-game">
+      <ScoreProvider>
+        <Switch>
+          <Route path="/" >
+            <WithLayouts page={Index} layouts={MainLayout} />
+          </Route>
 
-        <Route path="/date">
-          <WithLayouts page={DatePage} layouts={MainLayout} />
-        </Route>
+          <Route path="/date">
+            <WithLayouts page={DatePage} layouts={MainLayout} />
+          </Route>
 
-        <Route path="/time">
-          <WithLayouts page={TimePage} layouts={MainLayout} />
-        </Route>
+          <Route path="/time">
+            <WithLayouts page={TimePage} layouts={MainLayout} />
+          </Route>
 
-        <Route path="/number">
-          <WithLayouts page={NumberPage} layouts={MainLayout} />
-        </Route>
-      </Switch>
+          <Route path="/number">
+            <WithLayouts page={NumberPage} layouts={MainLayout} />
+          </Route>
+        </Switch>
 
-      <Toaster position='top-center' />
-    </ScoreProvider>
+        <Toaster position='top-center' />
+      </ScoreProvider>
+    </Router>
   )
 }
 
